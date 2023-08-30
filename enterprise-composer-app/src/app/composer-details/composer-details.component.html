@@ -1,0 +1,30 @@
+<!--
+ * Title: composer-details.component.html
+ * Author: Jennifer Hoitenga
+ * Date: August 30, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: How to Rename Projects video by Professor Krasso (https://youtu.be/T7ef0bOOWs4)
+ * Angular Tutorial for Beginners: Classes and Interfaces video by Professor Krasso (https://youtu.be/vvXSW_Cldvg)
+ * Angular Tutorial for Beginners: How to Pass Data to Routes by Professor Krasso (https://www.youtube.com/watch?v=KTVHu4hafUs)
+ * Bootstrap: https://getbootstrap.com/docs/4.0/content/reboot/
+-->
+
+<!-- Center the content within a Bootstrap column. -->
+<br />
+<div class="row">
+  <div class="col-sm-12">
+    <!-- Display composer details as a list using Bootstrap's list-group. -->
+    <ul class="list-group">
+      <!-- List item for Composer ID. -->
+      <li class="list-group-item">Composer ID: {{ composer.composerId }}</li>
+      <!-- List item for Full name. -->
+      <li class="list-group-item">Full name: {{ composer.fullName }}</li>
+      <!-- List item for Genre. -->
+      <li class="list-group-item">Genre: {{ composer.genre }}</li>
+    </ul>
+    <br />
+
+    <!-- Create a link to return to the composer list using Angular's routerLink directive. -->
+    <a routerLink="/composer-list" class="float-end"> Return to Composers </a>
+  </div>
+</div>

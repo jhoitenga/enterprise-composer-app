@@ -1,0 +1,48 @@
+<!--
+ * Title: contact.component.html
+ * Author: Jennifer Hoitenga
+ * Date: August 23, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: How to Rename Projects video by Professor Krasso (https://youtu.be/T7ef0bOOWs4)
+ * Angular Tutorial for Beginners: Classes and Interfaces video by Professor Krasso (https://youtu.be/vvXSW_Cldvg)
+ * Angular Tutorial for Beginners: How to Pass Data to Routes by Professor Krasso (https://www.youtube.com/watch?v=KTVHu4hafUs)
+ * Bootstrap: https://getbootstrap.com/docs/4.0/content/reboot/
+-->
+
+<!-- Include Bootstrap Icons CSS from a CDN for icon styling. -->
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+  rel="stylesheet"
+/>
+
+<!-- Container for the contact information, centered in a column with Bootstrap styling. -->
+<div class="col-8 m-auto">
+  <br /><br />
+  <!--Displaying a welcome message.-->
+  <h2 class="text-center">Welcome to the Contact Us page</h2>
+  <br /><br />
+  <div class="d-flex justify-content-around">
+    <div class="text-center">
+      <!--Adding a location icon as the header.-->
+      <i class="bi bi-geo-alt fs-1 text-danger d-block mx-auto"></i>
+
+      <!--Displaying the address information.-->
+      <address>
+        <p class="mb-4" style="line-height: 1.6">
+          Kraft-Engel Management<br />
+          15233 Ventura Blvd<br />
+          Suite 200<br />
+          Sherman Oaks, CA 91403
+        </p>
+      </address>
+    </div>
+
+    <div class="text-center">
+      <!--Adding a phone icon as the header.-->
+      <i class="bi bi-telephone fs-1 text-primary d-block mx-auto"></i>
+
+      <!--Displaying the phone information.-->
+      <p class="mb-4" style="line-height: 1.6">(818) 380-1918</p>
+    </div>
+  </div>
+</div>

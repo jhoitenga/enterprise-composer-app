@@ -1,0 +1,55 @@
+<!--
+ * Title: composer-list.component.html
+ * Author: Jennifer Hoitenga
+ * Date: August 30, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: How to Rename Projects video by Professor Krasso (https://youtu.be/T7ef0bOOWs4)
+ * Angular Tutorial for Beginners: Classes and Interfaces video by Professor Krasso (https://youtu.be/vvXSW_Cldvg)
+ * Angular Tutorial for Beginners: How to Pass Data to Routes by Professor Krasso (https://www.youtube.com/watch?v=KTVHu4hafUs)
+ * Angular Tutorial for Beginners: Handling Form Events with Observables, Part 1 by Professor Krasso (https://youtu.be/4O7eAN3sZ24)
+ * Angular Tutorial for Beginners: Handling Form Events with Observables, Part 2 by Professor Krasso (https://youtu.be/ha8ND1BqZ0k)
+ * Bootstrap: https://getbootstrap.com/docs/4.0/content/reboot/
+ *-->
+
+<!-- Creating a table to hold the composer information. -->
+<div class="row">
+  <div class="col-sm-12">
+    <!-- Container for the search input. -->
+    <div class="txtSearch">
+      <!-- Input field for searching by name. -->
+      <input
+        type="text"
+        id="txtSearch"
+        class="form-control"
+        placeholder="Search by name"
+        [formControl]="txtSearchControl"
+      />
+    </div>
+
+    <!-- Create a Bootstrap table with bordered styling. -->
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <!-- Table header row with columns for Composer ID, Full name, and Genre. -->
+        <tr>
+          <th scope="col">Composer ID</th>
+          <th scope="col">Full name</th>
+          <th scope="col">Genre</th>
+        </tr>
+      </thead>
+
+      <!-- Using 'async' pipe to unwrap the observable, iterate over the composer data and output the results to a Bootstrap table. -->
+      <tbody *ngFor="let composer of composers | async">
+        <!-- Table row for each composer. -->
+        <tr>
+          <td scope="row">
+            <a routerLink="/composer-details/{{ composer.composerId }}">{{
+              composer.composerId
+            }}</a>
+          </td>
+          <td scope="row">{{ composer.fullName }}</td>
+          <td scope="row">{{ composer.genre }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

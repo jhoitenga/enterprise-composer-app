@@ -1,0 +1,37 @@
+<!--
+ * Title: app.component.html
+ * Author: Jennifer Hoitenga
+ * Date: August 23, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: How to Rename Projects video by Professor Krasso (https://youtu.be/T7ef0bOOWs4)
+ * Angular Tutorial for Beginners: Classes and Interfaces video by Professor Krasso (https://youtu.be/vvXSW_Cldvg)
+ * Angular Tutorial for Beginners: How to Pass Data to Routes by Professor Krasso (https://www.youtube.com/watch?v=KTVHu4hafUs)
+ * Bootstrap: https://getbootstrap.com/docs/4.0/content/reboot/
+-->
+
+<!--Creating the navigation bar.-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- List of navigation items -->
+  <ul class="navbar-nav">
+    <!-- Composer List link -->
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/composer-list">Composer List</a>
+    </li>
+    <!-- About link -->
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/about">About</a>
+    </li>
+    <!-- Contact Us link -->
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/contact">Contact Us</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <br /><br />
+  <!-- Display the 'assignment' variable value as an h2 heading -->
+  <h2>{{ assignment }}</h2>
+  <!-- The router-outlet is a placeholder for rendering Angular components based on routing -->
+  <router-outlet></router-outlet>
+</div>

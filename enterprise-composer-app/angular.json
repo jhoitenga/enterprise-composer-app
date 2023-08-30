@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/enterprise-composer-app/enterprise-composer-app/",
             "outputPath": "dist/enterprise-composer-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -113,7 +114,10 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "outputPath": "dist/enterprise-composer-app"
+          }
         }
       }
     }
